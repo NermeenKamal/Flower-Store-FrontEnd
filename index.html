@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="index.css">
+    <link rel="icon" href="flower.icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Flower</title>
+</head>
+<body>
+    <!--header start-->
+    <header>
+
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fa fa-bars" ></label>
+<a href="#home" class="logo"><ion-icon name="rose-sharp"></ion-icon>Flower<span>:</span></a>
+
+<nav class="navbar">
+    <a href="#home"><ion-icon name="home-sharp"></ion-icon> Home</a>
+    <a href="#about"><ion-icon name="accessibility-outline"></ion-icon> About us</a>
+    <a href="Yasmin/product.html" target="_self"> <ion-icon name="cart-outline"></ion-icon> Products</a>
+
+    <a href="logain\index.html"><ion-icon name="logo-wechat"></ion-icon> Feedback</a>
+</nav>
+
+<div class="icon">
+    <a href="##"><ion-icon name="basket-outline"></ion-icon></a>
+    <a href="##" id="a"><ion-icon name="person-circle-outline"></ion-icon></a>
+    
+    <div class="buttons-container">
+               <button onclick="window.location.href='Menna/login.html'" style="cursor:pointer;">Log Out</button>
+           </div>
+</div>
+    </header>
+
+<!--header end-->
+<!--home start-->
+<section class="home" id="home">
+    <div class="conthome">
+        <h3 cite="https://www.proflowers.com/blog/flower-quotes">Flowers are a gift <br>
+            <span>Fresh , beautiful , unique </span>!</h3>
+        
+        <p cite="https://www.proflowers.com/blog/flower-quotes">As Gerard De Nerval once said, “Every flower is a soul blossoming in nature.” They paint contrasting colors along the ground and bring joy to many. Their elegance and delicate touches have us all in awe and exhilaration. This is often why flowers are seen as loving gifts for the special people in our lives, and the reaction of the person receiving the flowers is priceless.</p>
+       
+     
+    </div>
+</section>
+<!--home end-->
+<!--about_us start-->
+
+ <section class="about" id="about">
+<h1 class="heading">About-us</h1>
+<div class="row">
+
+
+<div class="vedcontain">
+    <video loop autoplay muted>
+        <source src="pexels-maksim-goncharenok-5642523 (1080p).mp4" type="video/mp4"  >
+        <source src="pexels-maksim-goncharenok-5642523 (1080p).mp4" type="video/ogg" >
+    
+      </video>
+</div>
+
+
+<div class="content">
+    <h3>What makes us your go-to?</h3>
+    <p>Free delivery , unique product ,suitable price , It takes on what makes an enterprise stand out from the crowd. This encompasses aspects such as quality, features, price, reputation, or customer service. </p>
+</div>
+
+
+</div>
+
+ </section>
+<!--about_us end-->
+
+<script>
+       document.addEventListener('DOMContentLoaded', function () {
+           var iconLink = document.querySelector('.icon #a');
+           var buttonsContainer = document.querySelector('.buttons-container');
+
+           iconLink.addEventListener('click', function (event) {
+               event.stopPropagation(); // Prevent the click event from reaching the document
+
+               // Toggle the display of the buttons container
+               buttonsContainer.style.display = (buttonsContainer.style.display === 'block') ? 'none' : 'block';
+           });
+
+           // Close the buttons container when clicking outside of it
+           document.addEventListener('click', function () {
+               buttonsContainer.style.display = 'none';
+           });
+
+           // Prevent the buttons container from closing when clicking inside it
+           buttonsContainer.addEventListener('click', function (event) {
+               event.stopPropagation();
+           });
+
+          
+       });
+   </script>
+   
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

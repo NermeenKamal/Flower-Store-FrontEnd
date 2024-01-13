@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+     body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: url(home-bg.jpg) no-repeat;
+
+    }
+    
+    .reset-container {
+        background-color: #ffffff2b;
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    label {
+        margin-bottom: 8px;
+    }
+    
+    input {
+        margin-bottom: 16px;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    
+    input[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+     </style>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="icon" href="flower.icon">
+     <title>Flower</title>
+ </head>
+ <body>
+     <div class="reset-container" id="resetContainer">
+         <h2>Password Reset</h2>
+ 
+         <!-- Initial Password Reset Form -->
+         <form id="resetForm" action="reset.php" method="post" onsubmit="return submitResetForm()">
+             <label for="email">Email:</label>
+             <input type="email" id="email" name="email" required>
+             
+             <!-- Use window.location.href to navigate back to the login page -->
+             <input type="button" value="Back" onclick="window.location.href='Menna/login.html'"
+              style="color: white; background-color: #e18da7bf; cursor: pointer;">
+             <input type="submit" value="Reset Password" style="cursor: pointer;">
+         </form>
+ 
+         <!-- New Password Form -->
+         <form id="newPasswordForm" action="reset-password.php" method="post" style="display: none;">
+             <label for="newPassword">New Password:</label>
+             <input type="password" id="newPassword" name="newPassword" required>
+ 
+             <label for="confirmPassword">Confirm Password:</label>
+             <input type="password" id="confirmPassword" name="confirmPassword" required>
+ 
+             <!-- Use the showResetForm function to go back to the first form -->
+             <input type="button" value="Back" onclick="showResetForm()" style="color: white; background-color: #e18da7bf; cursor: pointer;">
+             <input type="button" value="Done" onclick="resetPassword()" style="background-color: #4caf50; color:white; cursor: pointer;">
+         </form>
+     </div>
+ 
+     <script>
+         function showNewPasswordForm() {
+             document.getElementById("resetForm").style.display = "none";
+             document.getElementById("newPasswordForm").style.display = "flex";
+         }
+ 
+         function showResetForm() {
+             document.getElementById("resetForm").style.display = "flex";
+             document.getElementById("newPasswordForm").style.display = "none";
+         }
+ 
+         function validateEmail(email) {
+             // Use a simple check to see if the email contains '@'
+             return email.includes('@');
+         }
+ 
+         function validateResetForm() {
+             var email = document.getElementById("email").value;
+             if (!validateEmail(email)) {
+                 alert("Please enter a valid email address.");
+                 return false;
+             }
+ 
+             return true;
+         }
+ 
+         function validateNewPasswordForm() {
+             var newPassword = document.getElementById("newPassword").value;
+             var confirmPassword = document.getElementById("confirmPassword").value;
+ 
+             if (!newPassword || !confirmPassword) {
+                 alert("Please enter both new password and confirm password.");
+                 return false;
+             }
+ 
+             if (newPassword !== confirmPassword) {
+                 alert("Passwords do not match. Please enter the same password in both fields.");
+                 return false;
+             }
+ 
+             return true;
+         }
+ 
+         function submitResetForm() {
+             // Validate the email before proceeding to the next form
+             if (!validateResetForm()) {
+                 return false;
+             }
+ 
+             // Call the showNewPasswordForm function to transition to the next form
+             showNewPasswordForm();
+             return false; // Prevent the default form submission
+         }
+ 
+         function resetPassword() {
+
+             if (!validateNewPasswordForm()) {
+                 return;
+             }
+ 
+             window.location.href = "Menna/login.html";
+         }
+     </script>
+ </body>
+ </html>

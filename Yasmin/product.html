@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flower</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../flower.icon">
+</head>
+<body>
+  
+  <!--header start-->
+  <header>
+
+    <input type="checkbox" name="" id="toggler">
+    <label for="toggler" class="fa fa-bars"></label>
+    <a href="#home" class="logo"><ion-icon name="rose-sharp"></ion-icon>Flower<span>:</span></a>
+
+    <nav class="navbar">
+        <a href="../index.html"><ion-icon name="home-sharp"></ion-icon> Home</a>
+        <a href="../index.html"><ion-icon name="accessibility-outline"></ion-icon> About us</a>
+        <a href="product.html" target="_self"><ion-icon name="cart-outline"></ion-icon> Products</a>
+        <a href="../logain\index.html"><ion-icon name="logo-wechat"></ion-icon> Feedback</a>
+    </nav>
+
+    <div class="icon">
+        <a href="#" onclick="toggleSideList()"><ion-icon name="basket-outline"></ion-icon></a>
+        <span id="basketCounter" style="color: #e84393; font-size: 15px;">0</span>
+        <a href="##" id="aa"><ion-icon name="person-circle-outline"></ion-icon></a>
+        <div class="buttons-container">
+            <button onclick="window.location.href='../Menna/login.html'">Log Out</button>
+        </div>
+    </div>
+
+    <!-- Add the side list block -->
+    <div class="side-list" id="sideList" style="background-color: #e84393d6; right: -300px;">
+        <h1 style="color:white;">Shopping Cart</h1>
+        <ul id="cartItems"></ul>
+        <p style="font-size:19px; margin-bottom:10px;">Total Price: <span id="totalPrice">EGP 0.00</span></p>
+        <p style="font-size:18px;">Discount Amount: <span id="discountAmount">EGP 0.00</span></p>
+        <button onclick="window.location.href='../Salma/Booking.html'" style="margin-right: 35px;margin-left: 44px;">Book Now</button>
+        <button onclick="closeSideList()">Cancel</button>
+    </div>
+
+  </header>
+
+<!--header end-->
+  
+    <section class="products">
+        <div class="center-text" style="margin-top: 62px;">
+            <h2>Latest <span>Products</span></h2>
+        </div>
+
+        <div class="new-content">
+            <div class="row">
+                <img src="img/img-1.jpg">
+                <h4>White flowers</h4>
+                <h5>EGP 445.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">Add to cart</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="img/img-2.jpg">
+                <h4>red flowers</h4>
+                <h5>EGP 645.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">Add to cart</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="img/img-3.jpg">
+                <h4>Dark red flowers</h4>
+                <h5>EGP 845.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">Add to cart</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="img/img-4 (1).jpg">
+                <h4>pink flowers</h4>
+                <h5>EGP 555.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">Add to cart</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="img/img-5.jpg">
+                <h4>small red flowers</h4>
+                <h5>EGP 345.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">Add to cart</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="img/img-6.jpg">
+                <h4>yellow flowers</h4>
+                <h5>EGP 400.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">Add to cart</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="img/img-7.jpg">
+                <h4>red flowers</h4>
+                <h5>EGP 500.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">Add to cart</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <img src="img/img-8.jpg">
+                <h4>orange flowers</h4>
+                <h5>EGP 245.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                    <a href="#">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    <script>
+           document.addEventListener('DOMContentLoaded', function () {
+               var iconLink = document.querySelector('.icon #aa');
+               var buttonsContainer = document.querySelector('.buttons-container');
+    
+               iconLink.addEventListener('click', function (event) {
+                   event.stopPropagation(); // Prevent the click event from reaching the document
+    
+                   // Toggle the display of the buttons container
+                   buttonsContainer.style.display = (buttonsContainer.style.display === 'block') ? 'none' : 'block';
+               });
+    
+               // Close the buttons container when clicking outside of it
+               document.addEventListener('click', function () {
+                   buttonsContainer.style.display = 'none';
+               });
+    
+               // Prevent the buttons container from closing when clicking inside it
+               buttonsContainer.addEventListener('click', function (event) {
+                   event.stopPropagation();
+               });
+    
+              
+           });
+       </script>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    
+    
+    
+    
+    
+<script>
+    var basketCounter = 0;
+
+    function addToCart() {
+        // Your logic to add items to the cart
+        basketCounter++;
+        updateBasketCounter();
+        updateSideList();
+    }
+
+    function updateBasketCounter() {
+        document.getElementById('basketCounter').innerText = basketCounter;
+    }
+
+    function updateSideList() {
+        // Your logic to update the side list with cart items
+        var cartItems = document.getElementById('cartItems');
+        // Clear the existing items
+        cartItems.innerHTML = '';
+        // Update the total price and discount amount
+        var totalPrice = 0;
+        var discountAmount = 0;
+        
+        document.getElementById('totalPrice').innerText = `EGP ${totalPrice.toFixed(2)}`;
+        document.getElementById('discountAmount').innerText = `EGP ${discountAmount.toFixed(2)}`;
+    }
+    
+        function toggleSideList() {
+            var sideList = document.getElementById('sideList');
+            if (sideList.style.right === '0px') {
+                sideList.style.right = '-300px';
+            } else {
+                sideList.style.right = '0px';
+            }
+        }
+    
+        function closeSideList() {
+            var sideList = document.getElementById('sideList');
+            sideList.style.right = '-300px';
+        }
+</script>
+
+</body>
+</html>

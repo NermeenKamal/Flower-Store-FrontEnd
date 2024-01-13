@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flower</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../flower.icon">
+</head>
+<body style="background-color:rgb(248 227 232);">
+  
+  <header>
+
+      <input type="checkbox" name="" id="toggler">
+      <label for="toggler" class="fa fa-bars" ></label>
+<a href="#home" class="logo"><ion-icon name="rose-sharp"></ion-icon>Flower-<span>ADMIN:</span></a>
+
+<nav class="navbar">
+  <a href="manager.html"><ion-icon name="home-sharp"></ion-icon> Home</a>
+  <a href="product.html" target="_self"><ion-icon name="cart-outline"></ion-icon> Products</a>
+  <a href="Feedback.html"><ion-icon name="logo-wechat"></ion-icon> Feedbacks</a>
+  <a href="order.html"><ion-icon name="cube-outline"></ion-icon> Orders</a>
+</nav>
+
+<div class="icon">
+  <a href="##"><ion-icon name="person-circle-outline"></ion-icon></a>
+  <div class="buttons-container">
+               <button onclick="window.location.href='../Menna/login.html'">Log Out</button>
+           </div>
+</div>
+  </header>
+  
+    <section class="products">
+        <div class="center-text">
+            <h2 style="margin-top: 57px;">Latest <span>Products</span></h2>
+        </div>
+
+        <div class="new-content">
+          <div class="row" id="product1">
+                <img src="img/img-1.jpg">
+                <h4 style="margin-bottom: 43px;">White flowers</h4>
+                <h5 style="margin-bottom: 55px;">EGP 445.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                
+                <div id="x">
+                  
+                  <div class="bbtn">
+                     <a class="update-btn" href="manager.html" onclick="updateProduct(1)">Update</a>
+                     <a class="delete-btn" href="#" onclick="deleteProduct(1)">Delete</a>
+                 </div>
+                 
+               </div>
+            </div>
+
+            <div class="row" id="product2">
+                <img src="img/img-2.jpg">
+                <h4 style="margin-bottom: 43px;">red flowers</h4>
+                <h5 style="margin-bottom: 55px;">EGP 645.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                     <a class="update-btn" href="manager.html" onclick="updateProduct(2)">Update</a>
+                     <a class="delete-btn" href="#" onclick="deleteProduct(2)">Delete</a>
+                 </div>
+            </div>
+
+            <div class="row" id="product3">
+                <img src="img/img-3.jpg">
+                <h4 style="margin-bottom: 43px;">Dark red flowers</h4>
+                <h5 style="margin-bottom: 55px;">EGP 845.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                   <a class="update-btn" href="manager.html" onclick="updateProduct(3)">Update</a>
+                   <a class="delete-btn" href="#" onclick="deleteProduct(3)">Delete</a>
+               </div>
+            </div>
+
+            <div class="row" id="product4">
+                <img src="img/img-4 (1).jpg">
+                <h4 style="margin-bottom: 43px;">pink flowers</h4>
+                <h5 style="margin-bottom: 55px;">EGP 555.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                     <a class="update-btn" href="manager.html" onclick="updateProduct(4)">Update</a>
+                     <a class="delete-btn" href="#" onclick="deleteProduct(4)">Delete</a>
+                 </div>
+            </div>
+
+            <div class="row" id="product5">
+                <img src="img/img-5.jpg">
+                <h4 style="margin-bottom: 43px;">small red flowers</h4>
+                <h5 style="margin-bottom: 55px;">EGP 345.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                   <a class="update-btn" href="manager.html" onclick="updateProduct(5)">Update</a>
+                   <a class="delete-btn" href="#" onclick="deleteProduct(5)">Delete</a>
+               </div>
+            </div>
+
+            <div class="row" id="product6">
+                <img src="img/img-6.jpg">
+                <h4 style="margin-bottom: 43px;">yellow flowers</h4>
+                <h5 style="margin-bottom: 55px;">EGP 400.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                     <a class="update-btn" href="manager.html" onclick="updateProduct(6)">Update</a>
+                     <a class="delete-btn" href="#" onclick="deleteProduct(6)">Delete</a>
+                 </div>
+            </div>
+
+            <div class="row" id="product7">
+                <img src="img/img-7.jpg">
+                <h4 style="margin-bottom: 43px;">red flowers</h4>
+                <h5 style="margin-bottom: 55px;">EGP 500.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                   <a class="update-btn" href="manager.html" onclick="updateProduct(7)">Update</a>
+                   <a class="delete-btn" href="#" onclick="deleteProduct(7)">Delete</a>
+               </div>
+            </div>
+
+            <div class="row" id="product8">
+                <img src="img/img-8.jpg">
+                <h4 style="margin-bottom: 43px;">orange flowers</h4>
+                <h5 style="margin-bottom: 55px;">EGP 245.00</h5>
+                <div class="discount">
+                    <p>-10%</p>
+                </div>
+                <div class="bbtn">
+                   <a class="update-btn" href="manager.html" onclick="updateProduct(8)">Update</a>
+                   <a class="delete-btn" href="#" onclick="deleteProduct(8)">Delete</a>
+               </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Update form -->
+   <div id="updateForm">
+       <label for="productName">Product Name:</label>
+       <input type="text" id="productName">
+       <label for="productPrice">Product Price:</label>
+       <input type="text" id="productPrice">
+       <label for="productPhoto">Product Photo URL:</label>
+       <input type="text" id="productPhoto">
+       <button onclick="updateProductData()">Update Product</button>
+   </div>
+
+   <script>
+   function deleteProduct(productId) {
+    var confirmDelete = confirm("Are you sure you want to delete this product?");
+    if (confirmDelete) {
+        alert('Product deleted successfully!');
+        // Remove the product from the page
+        var productElement = document.getElementById('product' + productId);
+        if (productElement) {
+            productElement.remove();
+        }
+    }
+}
+
+   </script>
+   
+   <script>
+       document.addEventListener('DOMContentLoaded', function () {
+           var iconLink = document.querySelector('.icon a');
+           var buttonsContainer = document.querySelector('.buttons-container');
+
+           iconLink.addEventListener('click', function (event) {
+               event.stopPropagation(); // Prevent the click event from reaching the document
+
+               // Toggle the display of the buttons container
+               buttonsContainer.style.display = (buttonsContainer.style.display === 'block') ? 'none' : 'block';
+           });
+
+           // Close the buttons container when clicking outside of it
+           document.addEventListener('click', function () {
+               buttonsContainer.style.display = 'none';
+           });
+
+           // Prevent the buttons container from closing when clicking inside it
+           buttonsContainer.addEventListener('click', function (event) {
+               event.stopPropagation();
+           });
+
+           // Add your log out logic here
+          
+       });
+   </script>
+   
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

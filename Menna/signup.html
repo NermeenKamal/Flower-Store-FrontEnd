@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flower</title>
+  <link rel="stylesheet" href="signup.css">
+  <link rel="icon" href="flower.icon">
+  <link href='https://unpkg.com/boxicon@2.1.4/css/boxicon.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="wrapper">
+    <form id="signupForm" action="#">
+      <h1 style="color: #dc6f94;margin-bottom: 18px;">Sign up</h1>
+      <div class="input-box">
+        <input type="text" placeholder="Username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Name" required>
+      </div>
+      <div class="input-box">
+        <input type="text" placeholder="Email" required>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password" required style="margin-bottom: 19px;">
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="RE-Enter Password" required>
+      </div>
+
+      <div class="terms">
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox" style="color: #dc6f94;">I agree to these <a href="#">terms & Conditions</a></label>
+      </div>
+
+      <input type="button" value="Sign up" class="btn" style="margin-bottom: 13px; margin-top: 13px;" onclick="validateForm()">
+      <div class="member">
+        Already a member?<a href="login.html">
+          Login Here
+        </a>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      var username = document.querySelector('input[placeholder="Username"]').value;
+      var name = document.querySelector('input[placeholder="Name"]').value;
+      var email = document.querySelector('input[placeholder="Email"]').value;
+      var password = document.querySelector('input[placeholder="Password"]').value;
+      var confirmPassword = document.querySelector('input[placeholder="RE-Enter Password"]').value;
+      var termsCheckbox = document.getElementById('checkbox');
+  
+      // Check if any field is empty
+      if (username === '' || name === '' || email === '' || password === '' || confirmPassword === '' || !termsCheckbox.checked) {
+        alert('Please fill in all fields and agree to the terms & conditions.');
+        return;
+      }
+  
+      // Check if the email contains '@'
+      if (email.indexOf('@') === -1) {
+        alert('Please enter a valid email address.');
+        return;
+      }
+  
+      // Check if the passwords match
+      if (password !== confirmPassword) {
+        alert('Passwords do not match. Please enter the same password in both fields.');
+        return;
+      }
+  
+      window.location.href = '../Menna/login.html';
+    }
+  </script>
+</body>
+
+</html>

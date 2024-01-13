@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<link rel="stylesheet" href="style.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="icon" href="flower.icon">
+
+    <title>Flower</title>
+</head>
+<body>
+	
+	<!--header start-->
+	<header>
+
+			<input type="checkbox" name="" id="toggler">
+			<label for="toggler" class="fa fa-bars" ></label>
+<a href="#home" class="logo"><ion-icon name="rose-sharp"></ion-icon>Flower<span>:</span></a>
+
+<nav class="navbar">
+	<a href="../index.html"><ion-icon name="home-sharp"></ion-icon> Home</a>
+	<a href="../index.html"><ion-icon name="accessibility-outline"></ion-icon> About us</a>
+	<a href="../Yasmin/product.html" target="_self"><ion-icon name="cart-outline"></ion-icon> Products</a>
+	<a href="index.html"><ion-icon name="logo-wechat"></ion-icon> Feedback</a>
+</nav>
+
+<div class="icon">
+	<a href="##"><ion-icon name="basket-outline"></ion-icon></a>
+	<a href="##" id="aa"><ion-icon name="person-circle-outline"></ion-icon></a>
+	 
+	<div class="buttons-container">
+						 <button onclick="window.location.href='../Menna/login.html'" style="cursor:pointer;">Log Out</button>
+				 </div>
+</div>
+	</header>
+
+<!--header end-->
+	
+    <div class="wrapper">
+		<h3>please provide rating for our service!</h3>
+         <div class="rating">
+		<form action="#">
+				<input type="number" name="rating" hidden>
+                <i class='bx bx-star star' style="--i: 0;" ></i>
+                <i class='bx bx-star star' style="--i: 1;" ></i>
+                <i class='bx bx-star star' style="--i: 2;" ></i>
+                <i class='bx bx-star star' style="--i: 3;" ></i>
+                <i class='bx bx-star star' style="--i: 4;" ></i>
+			</div>
+			<textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+			<div class="btn-group" style="margin-left: 41px;">
+           <button type="submit" class="btn submit" onclick="..\index.html">Submit</button>
+					 <input type="button" value="Cancel" class="btn cancel" onclick="window.location.href='../index.html'">
+            </form>
+            <div class="image">
+                <img src="Web capture_15-12-2023_173123_.jpeg" alt="">
+            </div>
+			</div>
+    </div>
+        <script src="main.js"></script>
+				
+				
+				<script>
+							 document.addEventListener('DOMContentLoaded', function () {
+									 var iconLink = document.querySelector('.icon #aa');
+									 var buttonsContainer = document.querySelector('.buttons-container');
+				
+									 iconLink.addEventListener('click', function (event) {
+											 event.stopPropagation(); // Prevent the click event from reaching the document
+				
+											 // Toggle the display of the buttons container
+											 buttonsContainer.style.display = (buttonsContainer.style.display === 'block') ? 'none' : 'block';
+									 });
+				
+									 // Close the buttons container when clicking outside of it
+									 document.addEventListener('click', function () {
+											 buttonsContainer.style.display = 'none';
+									 });
+				
+									 // Prevent the buttons container from closing when clicking inside it
+									 buttonsContainer.addEventListener('click', function (event) {
+											 event.stopPropagation();
+									 });
+				
+									
+							 });
+					 </script>
+				<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+				<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+				
+    </body> 
+    </html>
